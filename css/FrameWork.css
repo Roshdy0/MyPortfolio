@@ -1,0 +1,58 @@
+/* Start Frame Work */
+:root {
+    --main-color: #fdfeff;
+    --hover-color: yellow;
+    --background-color: #0a101e;
+    --main-transition: all 0.3s ease-in;
+
+}
+*{
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+span{
+    cursor: pointer;
+    color: var(--hover-color);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+img{
+    width: 100%;
+}
+a, i{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-color);
+}
+a:hover, i:hover{
+    color: var(--hover-color);
+}
+.active{
+    color: var(--hover-color) !important;
+}
+.centerByFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-template{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+/* End Framework */
+
+/* Screen size & BootStrap width screen :-
+	Extra small	    <  576px	col-
+	Small 	    	>= 576px	col-ms
+	Medium 	    	>= 768px	col-md
+	Large		    >= 998px	col-lg
+	Extra Large	    >= 1200px	col-xl
+	XXL		        >= 1400px 	col-xxl */
+    @media (min-width: 768px) {   
+    }
+/* End Frame Work */
