@@ -4,7 +4,6 @@
     --hover-color: yellow;
     --background-color: #0a101e;
     --main-transition: all 0.3s ease-in;
-
 }
 *{
     box-sizing: border-box; 
@@ -53,6 +52,5 @@ a:hover, i:hover{
 	Large		    >= 998px	col-lg
 	Extra Large	    >= 1200px	col-xl
 	XXL		        >= 1400px 	col-xxl */
-    @media (min-width: 768px) {   
-    }
+    @media (min-width: 768px) {   }
 /* End Frame Work */

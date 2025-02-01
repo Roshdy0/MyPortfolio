@@ -64,6 +64,11 @@ body{
     transform: translateX(-50%);
     color: rgba(21, 27, 41, 0.5);
 }
+@media (max-width: 576px){
+    .title .watermark{
+        font-size: 40px;
+    }
+}
 
 /* Start Animation */
 .fullwidth li::after{
@@ -147,7 +152,7 @@ body{
 }
 .header .linksPhone i{
     position: absolute;
-    right: 0;
+    right: 10%;
     top: 24px;
     display: none;
     font-size: 40px;
@@ -161,7 +166,6 @@ body{
     background-color: var(--background-color);
     transform: translateY(-500px);
     transition: all 1s ease;
-
 }
 .header .linksPhone ul.ShowMenuPhone{
     transform: translateY(50px);
@@ -208,12 +212,13 @@ body{
     margin: 0 0 30px 0;
 }
 .landing .summary{
+    width: 46%;
     font-size: 18px;
-    line-height: 1.6em;
+    line-height: 1.6;
     margin: 0 auto 0 auto;
 }
 .landing .contact a{
-    margin: 0 20px;
+    margin: 20px;
     font-size: 24px;
 }
 @media (max-width: 998px) {
@@ -221,12 +226,13 @@ body{
         font-size: 40px;
     }
     .landing .summary{
+        width: 100%;
         font-size: 16px;
     }
 }
 @media (max-width: 768px) {
     .landing .name{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 /* End Landing */
@@ -238,6 +244,7 @@ body{
 }
 .about .icons i{
     margin: 0 20px;
+    font-size: 100px;
 }
 .about .icons .slideshow{
     height: 140px;
@@ -372,6 +379,7 @@ body{
     text-transform: capitalize;
 }
 .experiencs .box .company a:hover{ color: var(--hover-color); }
+
 .experiencs .box .company a::before,
 .experiencs .box .company a::after{
     content: "";
@@ -389,6 +397,7 @@ body{
     width: 0;
     background-color: var(--background-color);
 }
+
 .experiencs .box .company:hover a::after{
     width: 100%;
     border: 1px solid var(--hover-color);
@@ -406,22 +415,20 @@ body{
 .experiencs .box .jop .des ul li{
     margin: 12px 0;
 }
+@media (max-width: 768px) {
+    .experiencs .box .company a{ font-size: 16px; }
+    .experiencs .box .jop .position{ font-size: 24px; }
+    .experiencs .box .company a{ height: 80px; }
+}
+@media (max-width: 576px) {
+    .experiencs .box .company a{ font-size: 16px; }
+}
 /* End experiencs */
 
 /* Start PortFolio */
-.portfolio .slideshow{
-    width: 100%;
-    position: relative;
-    border-radius: 30px;
-}
+.portfolio .slideshow{ position: relative; }
 .portfolio .slideshow .slid{ display: none; }
-.portfolio .slideshow .slid .contant{
-    position: relative;
-    border-radius: 20px;
-}
-.portfolio .slideshow .slid .contant .background img{
-    border-radius: 20px;
-}
+.portfolio .slideshow .slid .contant .background img{ border-radius: 20px; }
 .portfolio .slideshow .slid .contant .links{
     position: absolute;
     width: 100%;
@@ -438,22 +445,20 @@ body{
 }
 .portfolio .slideshow .slid .contant .links .eye{ left: 12%; }
 .portfolio .slideshow .slid .contant .links .code{ right: 12% }
-
-.portfolio .slideshow .arrow{
+.portfolio .arrows .arrow{
     position: absolute;
     top: 50%;
-    width: 40px;
-    height: 50px;
-    display: flex;
-    font-size: 40px;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-    transform: translateY(-50%);
+    left: 0;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #0a101e;
+    transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.portfolio .slideshow .prev{ left: -5%; }
-.portfolio .slideshow .next{ right: -5%; }
+.portfolio .slideshow .next{ 
+    right: 0; 
+    left: unset;
+}
 .portfolio .slideshow .dots{
     position: absolute;
     left: 50%;
@@ -471,6 +476,17 @@ body{
     transition: var(--main-transition);
     background-color: var(--background-color);
 }
+@media (max-width: 768px) {
+    .portfolio .arrows .arrow{
+        font-size: 25px;
+    }
+    .portfolio .slideshow .slid .contant .links{
+        font-size: 20px;
+    }
+}
+@media (max-width: 576px) {
+}
+
 /* End PortFolio */
 
 /* Start Footer */
@@ -498,10 +514,24 @@ body{
     font-size: 26px;
     margin: 0 20px 0 0;
 }
+@media (max-width: 576px) {
+    .footer .contant{
+        font-size: 18px;
+        justify-content: center;
+    }
+    .footer .contact{
+        margin: 10px 0;
+        justify-content: center;
+    }
+    .footer .contact a{
+        margin: 0 18px;
+        font-size: 40px;
+    }
+}
 /* End Footer */
 
 /* Start Arrow */
-.arrow{
+.up{
     position: fixed;
     right: 2%;
     bottom: 6%;
@@ -511,7 +541,7 @@ body{
     border-radius: 50%;
     background-color: #000;
 }
-.arrow a::before{
+.up a::before{
     position: absolute;
     content: "";
     left: 50%;
