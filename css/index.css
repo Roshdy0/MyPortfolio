@@ -448,7 +448,7 @@ body{
 .portfolio .arrows .arrow{
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 4px;
     padding: 10px;
     font-size: 30px;
     border-radius: 10px;
@@ -456,7 +456,7 @@ body{
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
 .portfolio .slideshow .next{ 
-    right: 0; 
+    right: 4px; 
     left: unset;
 }
 .portfolio .slideshow .dots{
@@ -478,7 +478,8 @@ body{
 }
 @media (max-width: 768px) {
     .portfolio .arrows .arrow{
-        font-size: 25px;
+        font-size: 20px;
+        padding: 4px;
     }
     .portfolio .slideshow .slid .contant .links{
         font-size: 20px;
