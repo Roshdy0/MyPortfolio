@@ -1,13 +1,25 @@
 // Start Header
-let menuPhnoe = document.querySelector(".linksPhone i");
-let LinksPhone = document.querySelector(".header .linksPhone ul");
+let menuPhone = document.querySelector(".linksPhone i"),
+    LinksPhone = document.querySelector(".header .linksPhone ul"),
+    linkFullWidth = document.querySelectorAll('.fullwidth li a');
 
-menuPhnoe.onclick = function() {
+    linkFullWidth.forEach(function(link){
+        link.onclick = function() {
+            removeActiveLinks();
+            this.classList.add('active');
+        };
+    });
+
+    removeActiveLinks = function () {
+        linkFullWidth.forEach(function(link) {
+            link.classList.remove('active');
+        });
+    };
+
+menuPhone.onclick = function() {
     LinksPhone.classList.toggle("ShowMenuPhone");
 };
 // End Header
-
-// Start Section About SlideShow effectslide mySlides
 
 // Slide Show One
 let slides = document.getElementsByClassName("slideOne");
@@ -79,32 +91,20 @@ function showSlidesThree() {
 // End Section About SlideShow
 
 //  Start PortFolio
-let PFIndex = 1;
-PFFunction(PFIndex);
 
-function plusSlides(n) { PFFunction(PFIndex += n); }
-
-function currentSlide(n) { PFFunction(PFIndex = n); }
-
-function PFFunction(n) {
-  let i;
-  let slides = document.getElementsByClassName("slid");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) {PFIndex = 1} 
-
-  if (n < 1) {PFIndex = slides.length}
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[PFIndex-1].style.display = "block";  
-  dots[PFIndex-1].className += " active";
-}
+var owl = $('.portfolio .slideshow .slides');
+owl.owlCarousel({
+    nav:false,
+    loop:true,
+    center:true,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        }
+    }
+});
 
 //  End PortFolio
